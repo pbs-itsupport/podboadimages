@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Image Display</title>
+</head>
+<body>
+  <div id="imageContainer" style="text-align: center;">
+    <img id="displayedImage" src="" alt="Dynamic Image" style="max-width: 100%; height: auto;">
+  </div>
+
+  <script>
+    const images = {
+      "Monday": {
+        "0700": "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWdpZGkzZnhueWppZDRnczRsMWo3NDRtbng3MXpweXJldGFmcG5nbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7GaSxGR97neCAs3giE/giphy.webp",
+        "0900": "https://example.com/image-for-9am.webp"
+      },
+      "Tuesday": {
+        "0700": "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWdpZGkzZnhueWppZDRnczRsMWo3NDRtbng3MXpweXJldGFmcG5nbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7GaSxGR97neCAs3giE/giphy.webp",
+        "0900": "https://example.com/image-for-9am.webp"
+      },
+      "Wednesday": {
+        "0700": "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWdpZGkzZnhueWppZDRnczRsMWo3NDRtbng3MXpweXJldGFmcG5nbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7GaSxGR97neCAs3giE/giphy.webp",
+        "0900": "https://example.com/image-for-9am.webp"
+      },
+      "Thursday": {
+        "0700": "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWdpZGkzZnhueWppZDRnczRsMWo3NDRtbng3MXpweXJldGFmcG5nbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7GaSxGR97neCAs3giE/giphy.webp",
+        "0900": "https://example.com/image-for-9am.webp"
+      },
+      "Friday": {
+        "0700": "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWdpZGkzZnhueWppZDRnczRsMWo3NDRtbng3MXpweXJldGFmcG5nbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7GaSxGR97neCAs3giE/giphy.webp",
+        "0900": "https://example.com/image-for-9am.webp"
+      },
+      "error": {
+        "imageUrl": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnN1OXlvcXFkZnA1bHh5YzVnMjkxYmp6OXNhbmZycGZ6OHI5cmdkaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8L0Pky6C83SzkzU55a/giphy.webp"
+      },
+      "holidays": {
+        "01-01": "https://example.com/new-year.webp", // New Year's Day
+        "07-04": "https://example.com/independence-day.webp", // Independence Day
+        "12-25": "https://example.com/christmas-day.webp" // Christmas Day
+        // Add more holidays as needed
+      }
+    };
+
+    function getCurrentDayAndTime() {
+      const now = new Date();
+      const day = now.toLocaleString('en-US', { weekday: 'long' });
+      const time = now.getHours().toString().padStart(2, '0') + now.getMinutes().toString().padStart(2, '0');
+      const date = now.toISOString().slice(5, 10); // MM-DD format
+      return { day, time, date };
+    }
+
+    function findClosestImage(day, time, date) {
+      // Check if today is a holiday
+      if (images.holidays[date]) {
+        return images.holidays[date];
+      }
+
+      const dayImages = images[day];
+      if (!dayImages) return images.error.imageUrl;
+
+      const times = Object.keys(dayImages).sort(); // Sort the times in ascending order
+      let closestTime = times[0];
+
+      for (let i = 0; i < times.length; i++) {
+        if (time >= times[i]) {
+          closestTime = times[i];
+        } else {
+          break;
+        }
+      }
+
+      return dayImages[closestTime] || images.error.imageUrl;
+    }
+
+    function updateImage() {
+      const { day, time, date } = getCurrentDayAndTime();
+      const imageUrl = findClosestImage(day, time, date);
+
+      const imgElement = document.getElementById('displayedImage');
+      imgElement.src = imageUrl;
+      imgElement.alt = imageUrl === images.error.imageUrl ? 'No image available' : `${day} at closest time or holiday image`;
+    }
+
+    setInterval(updateImage, 60000); // Check every minute
+    updateImage(); // Initial call
+  </script>
+</body>
+</html>
