@@ -4,10 +4,17 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dynamic Image Display</title>
+  <style>
+    #imageContainer img {
+      width: 291px;
+      height: 230px;
+      object-fit: contain; /* Ensures the image fills the specified dimensions proportionally */
+    }
+  </style>
 </head>
 <body>
   <div id="imageContainer" style="text-align: center;">
-    <img id="displayedImage" src="" alt="Dynamic Image" style="max-width: 100%; height: auto;">
+    <img id="displayedImage" src="" alt="Dynamic Image">
   </div>
 
   <script>
