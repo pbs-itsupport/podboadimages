@@ -15,7 +15,7 @@
 
     async function loadImages() {
       try {
-        const response = await fetch('images.json');
+        const response = await fetch('https://pbs-itsupport.github.io/podboadimages/images.json');
         if (!response.ok) {
           throw new Error('Failed to load images.json');
         }
@@ -23,7 +23,8 @@
         updateImage();
       } catch (error) {
         console.error('Error loading images:', error);
-        document.getElementById('displayedImage').alt = 'Error loading images.';
+        const imgElement = document.getElementById('displayedImage');
+        imgElement.alt = 'Error loading images.';
       }
     }
 
