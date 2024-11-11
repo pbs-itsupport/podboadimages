@@ -23,7 +23,7 @@
       "imageUrl": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnN1OXlvcXFkZnA1bHh5YzVnMjkxYmp6OXNhbmZycGZ6OHI5cmdkaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8L0Pky6C83SzkzU55a/giphy.webp"
     },
     "holidays": {
-      "01-01": "https://example.com/new-year.webp",
+      "11-11": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExeXgzbW5wZjNodGxwOXQxNXAxdTBjeXI4OXA0MjluMXEyeXNjbWRmcyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/wZYlIlaR9nMUFjhEqw/giphy.webp",
       "07-04": "https://example.com/independence-day.webp",
       "12-25": "https://example.com/christmas-day.webp"
     }
