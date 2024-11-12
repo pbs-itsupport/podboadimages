@@ -4,22 +4,40 @@
     },
     "Tuesday": {
       "0700": "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExanoweXRxenB0dWlhNWY5bW9jZmlncjR0Y3BlZXF1MXcyeWl2dnh6NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/23YfyiFsVgOic/giphy.webp",
-        "0800": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXpwbW9qaTdteWhmNnpzYXlzaTNyN3VpNDk4dDJkc3o3cmxqc2JmNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oxeRmwx3zW5vrDr18g/giphy.webp"
+      "0800": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXpwbW9qaTdteWhmNnpzYXlzaTNyN3VpNDk4dDJkc3o3cmxqc2JmNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oxeRmwx3zW5vrDr18g/giphy.webp"
     },
     "Wednesday": {
-      "0700": "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWdpZGkzZnhueWppZDRnczRsMWo3NDRtbng3MXpweXJldGFmcG5nbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7GaSxGR97neCAs3giE/giphy.webp"
+      "0700": "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3VsNWN1ZGwzNTQ2cmgweTJ2ZGJheXFxNjd6NTk0MGd6c25zOWppdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xqWQTgQaYbXhrXoToX/giphy.webp"
     },
     "Thursday": {
-      "0700": "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWdpZGkzZnhueWppZDRnczRsMWo3NDRtbng3MXpweXJldGFmcG5nbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7GaSxGR97neCAs3giE/giphy.webp"
+      "0700": "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWxpOWJyMHJ6c2FleGJ4M2hnN3Vtc3QxdWs5eW13eHJsaTFrd2dtMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GZvelTBnrmujCxmpch/giphy.webp",
+      "1600": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcW8yOTB6M3ZzZ2Npc21vcnR0aHhqNndjaHZqMDZ4MGJ6bHB1MjAxYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rWZ4bUfIOGuyY/giphy.webp"
     },
     "Friday": {
-      "0700": "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWdpZGkzZnhueWppZDRnczRsMWo3NDRtbng3MXpweXJldGFmcG5nbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7GaSxGR97neCAs3giE/giphy.webp"
+      "0700": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTg4Y2Y5a3p2d2J4YXRwNjJmcGhpZWJwNWpmNGF5ZmV2MzkxYXA1diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MDxJnL1GGnuALMFu2e/giphy.webp",
+      "1700": "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExc25mOHk2bmszZGNnYXExdzQ2MXBueGpsMTN3aXFibWdhc2tuc2hxaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/495NGl536Py5ZbOJjY/giphy.webp"
     },
     "error": {
       "imageUrl": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnN1OXlvcXFkZnA1bHh5YzVnMjkxYmp6OXNhbmZycGZ6OHI5cmdkaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8L0Pky6C83SzkzU55a/giphy.webp"
     },
     "holidays": {
-      "11-11": "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmh2M25iOWhpeDh6ZnVvaWw2bm1lZjI3YmFrNHM0d3pnNWg3bDZzdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT1R9KCL0JvVw8rLoc/giphy.gif"
+      "01-16": "Stavv Bday",
+      "01-21": "Travis Bday",
+      "04-17": "Nikko Bday",
+      "05-02": "Jason Bday",
+      "05-03": "Dom BDay",
+      "07-01": "Rigo Bday",
+      "08-02": "CJ Bday",
+      "08-06": "Kyle Bday",
+      "08-28": "Romm Bday",
+      "08-30": "Naji Bday",
+      "09-12": "Bill Bday",
+      "09-23": "Jose Bday",
+      "10-06": "Sirj Bday",
+      "10-19": "Rueben BDay",
+      "11-11": "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmh2M25iOWhpeDh6ZnVvaWw2bm1lZjI3YmFrNHM0d3pnNWg3bDZzdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT1R9KCL0JvVw8rLoc/giphy.gif",
+      "11-24": "Alexander BDay",
+      "12-16": "Sebasss Bday"
     }
   }
   
