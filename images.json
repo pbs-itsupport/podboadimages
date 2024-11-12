@@ -1,31 +1,24 @@
 {
     "Monday": {
-      "0700": "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWdpZGkzZnhueWppZDRnczRsMWo3NDRtbng3MXpweXJldGFmcG5nbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7GaSxGR97neCAs3giE/giphy.webp",
-      "0900": "https://example.com/image-for-9am.webp"
+      "0700": "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWdpZGkzZnhueWppZDRnczRsMWo3NDRtbng3MXpweXJldGFmcG5nbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7GaSxGR97neCAs3giE/giphy.webp"
     },
     "Tuesday": {
-      "0700": "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWdpZGkzZnhueWppZDRnczRsMWo3NDRtbng3MXpweXJldGFmcG5nbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7GaSxGR97neCAs3giE/giphy.webp",
-      "0900": "https://example.com/image-for-9am.webp"
+      "0700": "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExanoweXRxenB0dWlhNWY5bW9jZmlncjR0Y3BlZXF1MXcyeWl2dnh6NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/23YfyiFsVgOic/giphy.webp"
     },
     "Wednesday": {
-      "0700": "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWdpZGkzZnhueWppZDRnczRsMWo3NDRtbng3MXpweXJldGFmcG5nbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7GaSxGR97neCAs3giE/giphy.webp",
-      "0900": "https://example.com/image-for-9am.webp"
+      "0700": "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWdpZGkzZnhueWppZDRnczRsMWo3NDRtbng3MXpweXJldGFmcG5nbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7GaSxGR97neCAs3giE/giphy.webp"
     },
     "Thursday": {
-      "0700": "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWdpZGkzZnhueWppZDRnczRsMWo3NDRtbng3MXpweXJldGFmcG5nbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7GaSxGR97neCAs3giE/giphy.webp",
-      "0900": "https://example.com/image-for-9am.webp"
+      "0700": "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWdpZGkzZnhueWppZDRnczRsMWo3NDRtbng3MXpweXJldGFmcG5nbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7GaSxGR97neCAs3giE/giphy.webp"
     },
     "Friday": {
-      "0700": "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWdpZGkzZnhueWppZDRnczRsMWo3NDRtbng3MXpweXJldGFmcG5nbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7GaSxGR97neCAs3giE/giphy.webp",
-      "0900": "https://example.com/image-for-9am.webp"
+      "0700": "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWdpZGkzZnhueWppZDRnczRsMWo3NDRtbng3MXpweXJldGFmcG5nbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/7GaSxGR97neCAs3giE/giphy.webp"
     },
     "error": {
       "imageUrl": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnN1OXlvcXFkZnA1bHh5YzVnMjkxYmp6OXNhbmZycGZ6OHI5cmdkaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8L0Pky6C83SzkzU55a/giphy.webp"
     },
     "holidays": {
-      "11-11": "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmh2M25iOWhpeDh6ZnVvaWw2bm1lZjI3YmFrNHM0d3pnNWg3bDZzdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT1R9KCL0JvVw8rLoc/giphy.gif",
-      "07-04": "https://example.com/independence-day.webp",
-      "12-25": "https://example.com/christmas-day.webp"
+      "11-11": "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmh2M25iOWhpeDh6ZnVvaWw2bm1lZjI3YmFrNHM0d3pnNWg3bDZzdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT1R9KCL0JvVw8rLoc/giphy.gif"
     }
   }
   
