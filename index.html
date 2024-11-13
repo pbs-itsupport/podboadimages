@@ -5,16 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dynamic Image Display</title>
   <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+
+    #imageContainer {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 80vh; /* Keeps container responsive */
+      background-color: white;
+      border: 1px solid #ddd;
+      margin: 20px auto;
+      padding: 10px;
+      width: 90%;
+      max-width: 400px; /* Prevent overly large container */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
     #imageContainer img {
-      width: 281px;
-      height: 328px;
-      object-fit: contain; /* Ensures the image fills the specified dimensions proportionally */
+      padding: 5px;
+      max-width: calc(100% - 10px);
+      max-height: calc(100% - 10px);
+      object-fit: contain;
+      box-sizing: border-box;
+      border-radius: 4px;
+    }
+
+    .error {
+      color: red;
+      font-size: 14px;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <div id="imageContainer" style="text-align: center;">
-    <img id="displayedImage" src="" alt="Dynamic Image">
+  <div id="imageContainer" role="img" aria-live="polite" aria-busy="false">
+    <img id="displayedImage" src="" alt="Dynamic Image" loading="lazy" onerror="handleImageError()">
+    <p id="errorMessage" class="error" style="display: none;">Error loading image</p>
   </div>
 
   <script>
@@ -30,8 +61,7 @@
         updateImage();
       } catch (error) {
         console.error('Error loading images:', error);
-        const imgElement = document.getElementById('displayedImage');
-        imgElement.alt = 'Error loading images.';
+        displayError('Failed to load image data.');
       }
     }
 
@@ -51,12 +81,12 @@
       const dayImages = images[day];
       if (!dayImages) return images.error.imageUrl;
 
-      const times = Object.keys(dayImages).sort(); // Sort the times in ascending order
+      const times = Object.keys(dayImages).sort();
       let closestTime = times[0];
 
-      for (let i = 0; i < times.length; i++) {
-        if (time >= times[i]) {
-          closestTime = times[i];
+      for (const current of times) {
+        if (time >= current) {
+          closestTime = current;
         } else {
           break;
         }
@@ -70,12 +100,30 @@
       const imageUrl = findClosestImage(day, time, date);
 
       const imgElement = document.getElementById('displayedImage');
+      const errorMessage = document.getElementById('errorMessage');
+
       imgElement.src = imageUrl;
       imgElement.alt = imageUrl === images.error.imageUrl ? 'No image available' : `${day} at closest time or holiday image`;
+
+      if (imageUrl === images.error.imageUrl) {
+        displayError('No matching image found.');
+      } else {
+        errorMessage.style.display = 'none';
+      }
+    }
+
+    function handleImageError() {
+      displayError('Failed to load the image.');
+    }
+
+    function displayError(message) {
+      const errorMessage = document.getElementById('errorMessage');
+      errorMessage.style.display = 'block';
+      errorMessage.textContent = message;
     }
 
     setInterval(updateImage, 60000); // Check every minute
-    window.onload = loadImages; // Load images.json on page load
+    window.onload = loadImages;
   </script>
 </body>
 </html>
