@@ -83,24 +83,31 @@
       if (images.holidays?.[date]) {
         return images.holidays[date];
       }
-  
+
       const dayImages = images[day];
       if (!dayImages) return images.error.imageUrl;
-  
-      const times = Object.keys(dayImages).sort();
-      let closestTime = times[0];
-  
+
+      const times = Object.keys(dayImages).sort(); // Sort times in ascending order
+      let closestTime = null;
+
+      // Find the closest earlier time key
       for (const current of times) {
         if (time >= current) {
-          closestTime = current;
+          closestTime = current; // Update closest time if it is earlier or equal to current time
         } else {
-          break;
+          break; // Stop if the current time is less than the key
         }
       }
-  
-      return dayImages[closestTime] || images.error.imageUrl;
+
+      // Return the image URL for the closest earlier time
+      if (closestTime) {
+        return dayImages[closestTime];
+      }
+
+      // If no earlier time exists, return the error image
+      return images.error.imageUrl;
     }
-  
+      
     function updateImage() {
       const { day, time, date } = getCurrentDayAndTimeInNewYork();
       const imageUrl = findClosestImage(day, time, date);
