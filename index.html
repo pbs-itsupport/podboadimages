@@ -15,128 +15,126 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      min-height: 80vh; /* Keeps container responsive */
+      min-height: 80vh;
       background-color: white;
       border: 1px solid #ddd;
       margin: 20px auto;
       padding: 10px;
       width: 90%;
-      max-width: 400px; /* Prevent overly large container */
+      max-width: 400px;
       box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
       border-radius: 8px;
     }
 
     #imageContainer img {
-      padding: 5px;
-      max-width: calc(100% - 10px);
-      max-height: calc(100% - 10px);
+      max-width: 100%;
+      max-height: 100%;
       object-fit: contain;
-      box-sizing: border-box;
-      border-radius: 4px;
     }
 
     .error {
       color: red;
-      font-size: 14px;
       text-align: center;
     }
   </style>
 </head>
 <body>
-  <div id="imageContainer" role="img" aria-live="polite" aria-busy="false">
-    <img id="displayedImage" src="" alt="Dynamic Image" loading="lazy" onerror="handleImageError()">
+  <div id="imageContainer">
+    <img id="displayedImage" alt="Dynamic Image">
     <p id="errorMessage" class="error" style="display: none;">Error loading image</p>
   </div>
 
   <script>
-    let images = {};
-  
+    let imagesData = {};
+
     async function loadImages() {
       try {
-        const response = await fetch('https://pbs-itsupport.github.io/podboadimages/images.json');
+        const response = await fetch('images.json');
         if (!response.ok) {
           throw new Error('Failed to load images.json');
         }
-        images = await response.json();
+        imagesData = await response.json();
         updateImage();
       } catch (error) {
         console.error('Error loading images:', error);
-        displayError('Failed to load image data.');
+        showError('Unable to load image data.');
       }
     }
-  
-    function getCurrentDayAndTimeInNewYork() {
+
+    function getNewYorkTime() {
       const now = new Date();
       const options = { timeZone: 'America/New_York', weekday: 'long', hour: '2-digit', minute: '2-digit', hour12: false };
       const formatter = new Intl.DateTimeFormat('en-US', options);
-      const [day, time] = formatter.formatToParts(now).reduce((acc, part) => {
-        if (part.type === 'weekday') acc[0] = part.value;
-        if (part.type === 'hour' || part.type === 'minute') acc[1] += part.value;
-        return acc;
-      }, ['', '']);
-      const date = new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', month: '2-digit', day: '2-digit' })
-        .format(now);
-      return { day, time, date };
+      const parts = formatter.formatToParts(now);
+      const day = parts.find(part => part.type === 'weekday').value;
+      const hour = parts.find(part => part.type === 'hour').value.padStart(2, '0');
+      const minute = parts.find(part => part.type === 'minute').value.padStart(2, '0');
+      const month = (now.getMonth() + 1).toString().padStart(2, '0');
+      const dayOfMonth = now.getDate().toString().padStart(2, '0');
+
+      return { day, time: `${hour}${minute}`, date: `${month}-${dayOfMonth}` };
     }
-  
+
     function findClosestImage(day, time, date) {
-      if (images.holidays?.[date]) {
-        return images.holidays[date];
+      const holidayImageUrl = imagesData.holidays?.[date];
+      if (holidayImageUrl) {
+        return holidayImageUrl;
       }
 
-      const dayImages = images[day];
-      if (!dayImages) return images.error.imageUrl;
+      const dayImages = imagesData[day];
+      if (!dayImages) return null;
 
-      const times = Object.keys(dayImages).sort(); // Sort times in ascending order
+      const sortedTimes = Object.keys(dayImages).sort();
       let closestTime = null;
 
-      // Find the closest earlier time key
-      for (const current of times) {
-        if (time >= current) {
-          closestTime = current; // Update closest time if it is earlier or equal to current time
+      for (const currentTime of sortedTimes) {
+        if (time >= currentTime) {
+          closestTime = currentTime;
         } else {
-          break; // Stop if the current time is less than the key
+          break;
         }
       }
 
-      // Return the image URL for the closest earlier time
-      if (closestTime) {
-        return dayImages[closestTime];
+      return closestTime ? dayImages[closestTime] : null;
+    }
+
+    function updateImage() {
+      const { day, time, date } = getNewYorkTime();
+
+      // Check for holiday image first
+      const holidayImageUrl = imagesData.holidays?.[date];
+      if (holidayImageUrl) {
+        displayImage(holidayImageUrl, `Holiday image for ${date}`);
+        return;
       }
 
-      // If no earlier time exists, return the error image
-      return images.error.imageUrl;
-    }
-      
-    function updateImage() {
-      const { day, time, date } = getCurrentDayAndTimeInNewYork();
+      // Fallback to closest image for the day and time
       const imageUrl = findClosestImage(day, time, date);
-  
-      const imgElement = document.getElementById('displayedImage');
-      const errorMessage = document.getElementById('errorMessage');
-  
-      imgElement.src = imageUrl;
-      imgElement.alt = imageUrl === images.error.imageUrl ? 'No image available' : `${day} at closest time or holiday image`;
-  
-      if (imageUrl === images.error.imageUrl) {
-        displayError('No matching image found.');
+      if (imageUrl) {
+        displayImage(imageUrl, `Image for ${day}`);
       } else {
-        errorMessage.style.display = 'none';
+        showError('No image available for the current time.');
       }
     }
-  
-    function handleImageError() {
-      displayError('Failed to load the image.');
-    }
-  
-    function displayError(message) {
+
+    function displayImage(url, altText) {
+      const imgElement = document.getElementById('displayedImage');
       const errorMessage = document.getElementById('errorMessage');
-      errorMessage.style.display = 'block';
-      errorMessage.textContent = message;
+
+      imgElement.src = url;
+      imgElement.alt = altText;
+      imgElement.style.display = 'block';
+      errorMessage.style.display = 'none';
     }
-  
-    setInterval(updateImage, 60000); // Check every minute
+
+    function showError(message) {
+      const errorMessage = document.getElementById('errorMessage');
+      errorMessage.textContent = message;
+      errorMessage.style.display = 'block';
+    }
+
+    setInterval(updateImage, 60000);
     window.onload = loadImages;
-  </script>  
+  </script>
 </body>
 </html>
