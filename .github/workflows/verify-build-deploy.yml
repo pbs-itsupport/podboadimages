@@ -30,7 +30,7 @@ jobs:
 
       - name: Install linters and validators
         run: |
-          npm install -g htmlhint eslint jsonlint
+          npm install -g htmlhint eslint jsonlint globals @eslint/js @eslint/eslintrc
 
       - name: Lint HTML
         run: |
