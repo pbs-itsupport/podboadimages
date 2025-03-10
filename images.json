@@ -1,68 +1,65 @@
 {
-    "Monday": {
-      "0700": "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2gwejJjb2MyNmQzODA1bWkzdDFleTRndTE5aHg0bmljZXF0enVybSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5ZZSYqvcH6QppFQGI5/giphy.webp",
-      "0900": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3I1MDFqcm1maDVkNDhqcXluMjk2bWRoamw2YWUxa3BpbTJsbTBzeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1hqYk0leUMddBBkAM7/giphy.webp"
-    },
-    "Tuesday": {
-      "0700": "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExanoweXRxenB0dWlhNWY5bW9jZmlncjR0Y3BlZXF1MXcyeWl2dnh6NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/23YfyiFsVgOic/giphy.webp",
-      "0800": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXpwbW9qaTdteWhmNnpzYXlzaTNyN3VpNDk4dDJkc3o3cmxqc2JmNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oxeRmwx3zW5vrDr18g/giphy.webp",
-      "0900": "https://media1.tenor.com/m/_bsFPWDMF64AAAAC/nodding-crossed-arms.gif",
-      "1100": "https://media1.tenor.com/m/Hr5LhrPYeBEAAAAC/everything-is-proceeding-as-i-have-foreseen-palpatine.gif",
-      "1300": "https://media1.tenor.com/m/VGtYoGPUcPcAAAAd/monkey-hand-out-give-me-orangutan.gif"
-    },
-    "Wednesday": {
-      "0700": "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3VsNWN1ZGwzNTQ2cmgweTJ2ZGJheXFxNjd6NTk0MGd6c25zOWppdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xqWQTgQaYbXhrXoToX/giphy.webp",
-      "1100": "https://media1.tenor.com/m/quEt0aqHHNYAAAAd/jennaortega-heart.gif",
-      "1300": "https://media1.tenor.com/m/GWTnktkS0d0AAAAd/lets-get-back-on-track-colin-jost.gif",
-      "1400": "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGdxM3ZmdDJyYW13cnE2aXJnNDhmczlkbHNkaHg1eG1sajhhMGw2MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/U2nN0ridM4lXy/200.webp",
-      "1500": "https://media1.tenor.com/m/tqcCmEmGVWoAAAAC/when-wen.gif"
-    },
-    "Thursday": {
-      "0700": "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWxpOWJyMHJ6c2FleGJ4M2hnN3Vtc3QxdWs5eW13eHJsaTFrd2dtMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GZvelTBnrmujCxmpch/giphy.webp",
-      "1100": "https://media1.tenor.com/m/d1xmsZDWLbsAAAAd/songs-for-littles-ms-rachel.gif",
-      "1400": "https://media1.tenor.com/m/L6VMjz_cLUMAAAAC/squirrel-huh.gif",
-      "1600": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcW8yOTB6M3ZzZ2Npc21vcnR0aHhqNndjaHZqMDZ4MGJ6bHB1MjAxYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rWZ4bUfIOGuyY/giphy.webp"
-    },
-    "Friday": {
-      "0700": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTg4Y2Y5a3p2d2J4YXRwNjJmcGhpZWJwNWpmNGF5ZmV2MzkxYXA1diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MDxJnL1GGnuALMFu2e/giphy.webp",
-      "1100": "https://media1.tenor.com/m/R0cvhZy3tOUAAAAd/travis-fran-healy.gif",
-      "1500": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcW8yOTB6M3ZzZ2Npc21vcnR0aHhqNndjaHZqMDZ4MGJ6bHB1MjAxYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rWZ4bUfIOGuyY/giphy.webp",
-      "1700": "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExc25mOHk2bmszZGNnYXExdzQ2MXBueGpsMTN3aXFibWdhc2tuc2hxaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/495NGl536Py5ZbOJjY/giphy.webp"
-    },
-    "error": {
-      "imageUrl": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnN1OXlvcXFkZnA1bHh5YzVnMjkxYmp6OXNhbmZycGZ6OHI5cmdkaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8L0Pky6C83SzkzU55a/giphy.webp"
-    },
-    {
-      "holidays": {
-        "01-16": "Stavv Bday",
-        "01-21": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExamdhNDZvd3o5d3A4OTFhOXd5bmxjYjdxZjZuaXBueDMwZWpvcW42eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/E4qkWzuBbquGL9GJQ6/giphy.gif",
-        "03-10": "https://media1.tenor.com/m/y_6v-BrI-MsAAAAC/mario-super-mario.gif",
-        "03-14": "https://media1.tenor.com/m/yGjBtp3UTU8AAAAC/pizza-pi-day.gif",
-        "04-05": "https://media1.tenor.com/m/EI5hR4fFmbsAAAAd/spock-to-infinity-and-beyond.gif",
-        "04-17": "Nikko Bday",
-        "05-02": "Jason Bday",
-        "05-03": "Dom BDay",
-        "05-04": "Star Wars Day",
-        "07-01": "Rigo Bday",
-        "07-31": "https://media1.tenor.com/m/LO-CNO5jStIAAAAC/wizard.gif",
-        "08-02": "CJ Bday",
-        "08-06": "Kyle Bday",
-        "08-28": "Romm Bday",
-        "08-30": "Naji Bday",
-        "09-12": "Bill Bday",
-        "09-22": "https://media1.tenor.com/m/xcaP4vZWPEYAAAAC/the-hobbit-breakfast.gif",
-        "09-23": "Jose Bday",
-        "10-06": "Sirj Bday",
-        "10-19": "Rueben BDay",
-        "10-21": "https://media1.tenor.com/m/zM9V0AeTeKIAAAAd/nounish-nouns-dao.gif",
-        "11-11": "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmh2M25iOWhpeDh6ZnVvaWw2bm1lZjI3YmFrNHM0d3pnNWg3bDZzdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT1R9KCL0JvVw8rLoc/giphy.gif",
-        "11-23": "https://media1.tenor.com/m/4Y29HjXgLHAAAAAC/matt-smith-silly.gif",
-        "11-24": "Alexander BDay",
-        "11-27": "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3lvM3I2czQ4MzNzeWZzbmNxaGRqc3RiYnJtcHE1c21lNWdoNm00ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nDMyoNRkCesJdZAuuL/giphy.webp",
-        "12-09": "https://media1.tenor.com/m/5dwf4_O-h1cAAAAC/doom-eternal-goose.gif",
-        "12-16": "Sebasss Bday",
-        "12-31": "https://media1.tenor.com/m/Yd85uHQ4tbQAAAAd/fiesta-celebrate.gif"
-      }
-    }    
+  "Monday": {
+    "0700": "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2gwejJjb2MyNmQzODA1bWkzdDFleTRndTE5aHg0bmljZXF0enVybSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5ZZSYqvcH6QppFQGI5/giphy.webp",
+    "0900": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3I1MDFqcm1maDVkNDhqcXluMjk2bWRoamw2YWUxa3BpbTJsbTBzeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1hqYk0leUMddBBkAM7/giphy.webp"
+  },
+  "Tuesday": {
+    "1100": "https://media1.tenor.com/m/Hr5LhrPYeBEAAAAC/everything-is-proceeding-as-i-have-foreseen-palpatine.gif",
+    "1300": "https://media1.tenor.com/m/VGtYoGPUcPcAAAAd/monkey-hand-out-give-me-orangutan.gif",
+    "0700": "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExanoweXRxenB0dWlhNWY5bW9jZmlncjR0Y3BlZXF1MXcyeWl2dnh6NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/23YfyiFsVgOic/giphy.webp",
+    "0800": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXpwbW9qaTdteWhmNnpzYXlzaTNyN3VpNDk4dDJkc3o3cmxqc2JmNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oxeRmwx3zW5vrDr18g/giphy.webp",
+    "0900": "https://media1.tenor.com/m/_bsFPWDMF64AAAAC/nodding-crossed-arms.gif"
+  },
+  "Wednesday": {
+    "1100": "https://media1.tenor.com/m/quEt0aqHHNYAAAAd/jennaortega-heart.gif",
+    "1300": "https://media1.tenor.com/m/GWTnktkS0d0AAAAd/lets-get-back-on-track-colin-jost.gif",
+    "1400": "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGdxM3ZmdDJyYW13cnE2aXJnNDhmczlkbHNkaHg1eG1sajhhMGw2MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/U2nN0ridM4lXy/200.webp",
+    "1500": "https://media1.tenor.com/m/tqcCmEmGVWoAAAAC/when-wen.gif",
+    "0700": "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3VsNWN1ZGwzNTQ2cmgweTJ2ZGJheXFxNjd6NTk0MGd6c25zOWppdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xqWQTgQaYbXhrXoToX/giphy.webp"
+  },
+  "Thursday": {
+    "1100": "https://media1.tenor.com/m/d1xmsZDWLbsAAAAd/songs-for-littles-ms-rachel.gif",
+    "1400": "https://media1.tenor.com/m/L6VMjz_cLUMAAAAC/squirrel-huh.gif",
+    "1600": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcW8yOTB6M3ZzZ2Npc21vcnR0aHhqNndjaHZqMDZ4MGJ6bHB1MjAxYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rWZ4bUfIOGuyY/giphy.webp",
+    "0700": "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWxpOWJyMHJ6c2FleGJ4M2hnN3Vtc3QxdWs5eW13eHJsaTFrd2dtMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GZvelTBnrmujCxmpch/giphy.webp"
+  },
+  "Friday": {
+    "1100": "https://media1.tenor.com/m/R0cvhZy3tOUAAAAd/travis-fran-healy.gif",
+    "1500": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcW8yOTB6M3ZzZ2Npc21vcnR0aHhqNndjaHZqMDZ4MGJ6bHB1MjAxYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rWZ4bUfIOGuyY/giphy.webp",
+    "1700": "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExc25mOHk2bmszZGNnYXExdzQ2MXBueGpsMTN3aXFibWdhc2tuc2hxaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/495NGl536Py5ZbOJjY/giphy.webp",
+    "0700": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTg4Y2Y5a3p2d2J4YXRwNjJmcGhpZWJwNWpmNGF5ZmV2MzkxYXA1diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MDxJnL1GGnuALMFu2e/giphy.webp"
+  },
+  "error": {
+    "imageUrl": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnN1OXlvcXFkZnA1bHh5YzVnMjkxYmp6OXNhbmZycGZ6OHI5cmdkaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8L0Pky6C83SzkzU55a/giphy.webp"
+  },
+  "holidays": {
+    "01-16": "Stavv Bday",
+    "01-21": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExamdhNDZvd3o5d3A4OTFhOXd5bmxjYjdxZjZuaXBueDMwZWpvcW42eiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/E4qkWzuBbquGL9GJQ6/giphy.gif",
+    "03-10": "https://media1.tenor.com/m/y_6v-BrI-MsAAAAC/mario-super-mario.gif",
+    "03-14": "https://media1.tenor.com/m/yGjBtp3UTU8AAAAC/pizza-pi-day.gif",
+    "04-05": "https://media1.tenor.com/m/EI5hR4fFmbsAAAAd/spock-to-infinity-and-beyond.gif",
+    "04-17": "Nikko Bday",
+    "05-02": "Jason Bday",
+    "05-03": "Dom BDay",
+    "05-04": "Star Wars Day",
+    "07-01": "Rigo Bday",
+    "07-31": "https://media1.tenor.com/m/LO-CNO5jStIAAAAC/wizard.gif",
+    "08-02": "CJ Bday",
+    "08-06": "Kyle Bday",
+    "08-28": "Romm Bday",
+    "08-30": "Naji Bday",
+    "09-12": "Bill Bday",
+    "09-22": "https://media1.tenor.com/m/xcaP4vZWPEYAAAAC/the-hobbit-breakfast.gif",
+    "09-23": "Jose Bday",
+    "10-06": "Sirj Bday",
+    "10-19": "Rueben BDay",
+    "10-21": "https://media1.tenor.com/m/zM9V0AeTeKIAAAAd/nounish-nouns-dao.gif",
+    "11-11": "https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExMmh2M25iOWhpeDh6ZnVvaWw2bm1lZjI3YmFrNHM0d3pnNWg3bDZzdiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xT1R9KCL0JvVw8rLoc/giphy.gif",
+    "11-23": "https://media1.tenor.com/m/4Y29HjXgLHAAAAAC/matt-smith-silly.gif",
+    "11-24": "Alexander BDay",
+    "11-27": "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExb3lvM3I2czQ4MzNzeWZzbmNxaGRqc3RiYnJtcHE1c21lNWdoNm00ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/nDMyoNRkCesJdZAuuL/giphy.webp",
+    "12-09": "https://media1.tenor.com/m/5dwf4_O-h1cAAAAC/doom-eternal-goose.gif",
+    "12-16": "Sebasss Bday",
+    "12-31": "https://media1.tenor.com/m/Yd85uHQ4tbQAAAAd/fiesta-celebrate.gif"
   }
-  
+}
