@@ -1,5 +1,5 @@
-# Simple workflow for deploying static content to GitHub Pages with validation
-name: Deploy static content to Pages
+# Verify, build, and deploy static content to GitHub Pages on push
+name: Verify, build, and deploy to Pages
 
 on:
   push:
@@ -36,20 +36,16 @@ jobs:
         run: |
           npm install globals @eslint/js @eslint/eslintrc -D
 
-      - name: Lint HTML
-        run: |
-          htmlhint index.html
-
       - name: Lint JavaScript
         run: |
-          eslint script.js || exit 1
+          eslint update-image.js || exit 1
 
       - name: Validate JSON
         run: |
           jsonlint images.json || exit 1
 
   deploy:
-    needs: verify  # Ensures verification passes before deployment
+    needs: verify
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -58,6 +54,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+
+      - name: Generate index.html with current image
+        run: node update-image.js
 
       - name: Setup Pages
         uses: actions/configure-pages@v5

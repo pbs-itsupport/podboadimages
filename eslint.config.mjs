@@ -28,4 +28,12 @@ export default [...compat.extends("eslint:recommended"), {
         "no-unused-vars": "warn",
         "no-console": "off",
     },
+}, {
+    files: ["update-image.js"],
+    languageOptions: {
+        globals: {
+            ...globals.node,
+        },
+        sourceType: "commonjs",
+    },
 }];
