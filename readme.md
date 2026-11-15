@@ -7,9 +7,9 @@ The help-desk TVs load **https://pbs-itsupport.github.io/podboadimages/**. It sh
 ## When the GIF changes
 
 - **Weekdays, 06:00–18:00 New York time:** a new GIF from the pool every work hour. Each GIF gets equal airtime.
-- **Nights and weekends:** nothing runs, so the last GIF stays up.
-- **Holiday or birthday GIF:** if today's date (MM-DD) has a GIF, it replaces the rotation for the whole day. Dates that only hold a name or text label (like "Jason Bday") don't change the screen. A holiday on a Saturday or Sunday won't show, because nothing runs on weekends.
-- **Empty pool:** the error image shows.
+- **Nights and weekends:** the scheduled update only runs on weekdays during work hours, so the last GIF stays up. (It also fires once at the edge hour, 5am or 7pm depending on daylight time, but that shows the same GIF as 6am/6pm.) A manual run, or a code change pushed to main, also refreshes the page at any time.
+- **Holiday or birthday GIF:** if today's date (MM-DD) has a GIF, it replaces the rotation for the whole day. Dates that only hold a name or text label (like "Jason Bday") don't change the screen. A holiday or birthday on a weekend usually won't be seen, because nothing updates on weekends.
+- **Empty pool:** the error image shows, but only if today has no holiday or birthday GIF.
 
 ## Submit a GIF
 
@@ -22,7 +22,7 @@ You need a GitHub account.
    - **Birthday / occasion**: shows all day on the date you give (MM-DD, like `03-05`). This only works for a date that is empty or holds just a text label. If the date already has a GIF, the submission is rejected.
 4. Optionally add a name or occasion.
 
-The URL must be a direct `https://` link ending in `.gif`, `.webp`, `.png`, `.jpg` or `.jpeg`, with no spaces or quote or angle-bracket characters. The same GIF can't be added to the pool twice, and the pool holds at most 200.
+The URL must be a direct `https://` link ending in `.gif`, `.webp`, `.png`, `.jpg` or `.jpeg`, with no spaces, quotes, `<`, `>` or backslashes. The same GIF can't be added to the pool twice, and the pool holds at most 200.
 
 A bot replies on your issue and closes it.
 
@@ -30,7 +30,7 @@ A bot replies on your issue and closes it.
 - **Everyone else** waits for a maintainer to add the `approved` label.
 - **Invalid submissions** get a comment explaining why and are closed.
 
-A published GIF appears at the next work-hour update.
+A new rotation GIF joins the pool and comes up in its turn, not necessarily at the next update. A birthday or occasion GIF shows on its date.
 
 ## Maintainers
 
