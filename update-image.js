@@ -1,8 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-function getNewYorkTime() {
-    const now = new Date();
+function getNewYorkTime(now = new Date()) {
     const options = {
         timeZone: "America/New_York",
         weekday: "long",
@@ -112,4 +111,8 @@ function main() {
     console.log("index.html updated successfully.");
 }
 
-main();
+module.exports = { getNewYorkTime, findCurrentImage, generateHtml };
+
+if (require.main === module) {
+    main();
+}

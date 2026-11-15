@@ -29,7 +29,7 @@ export default [...compat.extends("eslint:recommended"), {
         "no-console": "off",
     },
 }, {
-    files: ["update-image.js"],
+    files: ["update-image.js", "scripts/**/*.js", "tests/**/*.js"],
     languageOptions: {
         globals: {
             ...globals.node,

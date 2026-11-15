@@ -1,19 +1,14 @@
-# Verify, build, and deploy static content to GitHub Pages on push
+# Verify pull requests; build and deploy static content to GitHub Pages on main
 name: Verify, build, and deploy to Pages
 
 on:
   push:
     branches: [main]
+  pull_request:
   workflow_dispatch:
 
 permissions:
   contents: read
-  pages: write
-  id-token: write
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
 
 jobs:
   verify:
@@ -28,24 +23,28 @@ jobs:
         with:
           node-version: 22
 
-      - name: Install linters and validators
-        run: |
-          npm install -g htmlhint eslint jsonlint
-
-      - name: Install globals
-        run: |
-          npm install globals @eslint/js @eslint/eslintrc -D
+      - name: Install dependencies
+        run: npm ci
 
       - name: Lint JavaScript
-        run: |
-          eslint update-image.js || exit 1
+        run: npm run lint
 
-      - name: Validate JSON
-        run: |
-          jsonlint images.json || exit 1
+      - name: Validate images.json
+        run: npm run check:images
+
+      - name: Run tests
+        run: npm test
 
   deploy:
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'push' && github.ref == 'refs/heads/main')
     needs: verify
+    permissions:
+      contents: read
+      pages: write
+      id-token: write
+    concurrency:
+      group: "pages"
+      cancel-in-progress: false
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
