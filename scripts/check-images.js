@@ -3,8 +3,7 @@ const path = require("node:path");
 
 function checkImages(json) {
     const data = JSON.parse(json);
-    const weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-    const knownKeys = [...weekdays, "holidays", "error"];
+    const knownKeys = ["pool", "holidays", "error"];
     const isObject = value => value !== null && typeof value === "object" && !Array.isArray(value);
     const isHttpsUrl = value => {
         if (typeof value !== "string" || !value.startsWith("https://") || /[\s'"<>]/u.test(value)) {
@@ -26,14 +25,11 @@ function checkImages(json) {
     }
     requireValid(isObject(data.error) && isHttpsUrl(data.error.imageUrl), "error.imageUrl must be an https URL without quotes, angle brackets or whitespace");
 
-    for (const day of weekdays) {
-        if (!Object.hasOwn(data, day)) continue;
-        requireValid(isObject(data[day]), `${day} must be an object`);
-        for (const [slot, url] of Object.entries(data[day])) {
-            requireValid(slot.length === 4 && /^([01]\d|2[0-3])[0-5]\d$/.test(slot), `${day}.${slot} must be a valid HHMM time`);
-            requireValid(isHttpsUrl(url), `${day}.${slot} must be an https URL without quotes, angle brackets or whitespace`);
-        }
+    requireValid(Array.isArray(data.pool), "pool must be an array");
+    for (const url of data.pool) {
+        requireValid(isHttpsUrl(url), "pool entries must be https URLs without quotes, angle brackets or whitespace");
     }
+    requireValid(new Set(data.pool).size === data.pool.length, "pool must not contain duplicate URLs");
 
     if (Object.hasOwn(data, "holidays")) {
         requireValid(isObject(data.holidays), "holidays must be an object");

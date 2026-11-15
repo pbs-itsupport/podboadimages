@@ -1,7 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
-function getNewYorkTime(now = new Date()) {
+function getNewYorkTime(now) {
     const options = {
         timeZone: "America/New_York",
         weekday: "long",
@@ -28,38 +28,36 @@ function getNewYorkTime(now = new Date()) {
     return { day, time: `${hour}${minute}`, date: `${month}-${dayOfMonth}` };
 }
 
-function findCurrentImage(imagesData, day, time, date) {
-    // Check holidays first
+function getWorkSlot(now) {
+    const parts = new Intl.DateTimeFormat("en-US", {
+        timeZone: "America/New_York",
+        year: "numeric", month: "2-digit", day: "2-digit",
+        hour: "2-digit", hourCycle: "h23"
+    }).formatToParts(now);
+    const value = type => Number(parts.find(part => part.type === type).value);
+    const calendarDate = Date.UTC(value("year"), value("month") - 1, value("day"));
+    // Monday 1970-01-05 is slot zero; weekends reuse Friday's final slot.
+    const days = Math.floor((calendarDate - Date.UTC(1970, 0, 5)) / 86400000);
+    const weeks = Math.floor(days / 7);
+    const weekday = days - weeks * 7;
+    const weekdaysSinceEpoch = weeks * 5 + Math.min(weekday, 4);
+    const hourSlot = weekday >= 5 ? 12 : Math.max(0, Math.min(value("hour") - 6, 12));
+    return weekdaysSinceEpoch * 13 + hourSlot;
+}
+
+function findCurrentImage(imagesData, now) {
+    const { date } = getNewYorkTime(now);
     const holidayEntry = imagesData.holidays?.[date];
-    if (holidayEntry) {
-        // Some holiday entries are just text labels (e.g. "Stavv Bday"), not URLs
-        if (holidayEntry.startsWith("http")) {
-            return { url: holidayEntry, alt: `Holiday image for ${date}` };
-        }
-        // For text-only holidays (birthdays etc.), fall through to regular schedule
-        // or use error fallback if no schedule matches
+    if (holidayEntry?.startsWith("http")) {
+        return { url: holidayEntry, alt: `Holiday image for ${date}` };
     }
 
-    // Check weekday schedule
-    const dayImages = imagesData[day];
-    if (dayImages) {
-        const sortedTimes = Object.keys(dayImages).sort();
-        let closestTime = null;
-
-        for (const currentTime of sortedTimes) {
-            if (time >= currentTime) {
-                closestTime = currentTime;
-            } else {
-                break;
-            }
-        }
-
-        if (closestTime) {
-            return { url: dayImages[closestTime], alt: `Image for ${day}` };
-        }
+    if (imagesData.pool?.length) {
+        const slot = getWorkSlot(now);
+        const index = ((slot % imagesData.pool.length) + imagesData.pool.length) % imagesData.pool.length;
+        return { url: imagesData.pool[index], alt: "Rotating image" };
     }
 
-    // Fallback to error image
     if (imagesData.error?.imageUrl) {
         return { url: imagesData.error.imageUrl, alt: "Fallback image" };
     }
@@ -94,11 +92,12 @@ function main() {
     const indexPath = path.join(__dirname, "index.html");
 
     const imagesData = JSON.parse(fs.readFileSync(imagesPath, "utf-8"));
-    const { day, time, date } = getNewYorkTime();
+    const now = new Date();
+    const { day, time, date } = getNewYorkTime(now);
 
     console.log(`Current NY time: ${day} ${time}, date: ${date}`);
 
-    const imageResult = findCurrentImage(imagesData, day, time, date);
+    const imageResult = findCurrentImage(imagesData, now);
 
     if (imageResult) {
         console.log(`Selected image: ${imageResult.url}`);
