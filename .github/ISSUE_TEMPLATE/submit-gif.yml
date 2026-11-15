@@ -1,0 +1,33 @@
+name: Submit a GIF
+description: Share a GIF for the TVs, or celebrate a birthday or occasion.
+title: "GIF submission"
+labels: [gif-submission]
+body:
+  - type: input
+    id: gif-url
+    attributes:
+      label: GIF URL
+      description: Paste a direct https link ending in .gif, .webp, .png, .jpg or .jpeg.
+      placeholder: https://example.com/celebrate.gif
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Type
+      options:
+        - Add to rotation
+        - Birthday / occasion
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: Date MM-DD
+      description: Only needed for a birthday or occasion. Use month-day, like 03-05.
+      placeholder: "03-05"
+  - type: input
+    id: name
+    attributes:
+      label: Name / occasion
+      description: Optional — who or what are we celebrating?

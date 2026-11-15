@@ -1,0 +1,86 @@
+name: Publish submitted GIF
+
+on:
+  issues:
+    types: [opened, labeled]
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  submit:
+    if: >-
+      !github.event.issue.pull_request &&
+      contains(github.event.issue.labels.*.name, 'gif-submission') &&
+      (github.event.action == 'opened' ||
+       (github.event.action == 'labeled' && github.event.label.name == 'approved'))
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ github.token }}
+      GH_REPO: ${{ github.repository }}
+      ISSUE_NUMBER: ${{ github.event.issue.number }}
+
+    steps:
+      - name: Ask for maintainer approval
+        if: >-
+          github.event.action == 'opened' &&
+          !contains(fromJSON('["OWNER", "MEMBER", "COLLABORATOR"]'), github.event.issue.author_association)
+        run: |
+          gh issue edit "$ISSUE_NUMBER" --add-label needs-triage
+          gh issue comment "$ISSUE_NUMBER" --body 'Thanks for the GIF! A maintainer must add the approved label before it can be published.'
+
+      - name: Checkout main
+        if: >-
+          github.event.action == 'labeled' ||
+          contains(fromJSON('["OWNER", "MEMBER", "COLLABORATOR"]'), github.event.issue.author_association)
+        uses: actions/checkout@v7
+        with:
+          ref: main
+
+      - name: Set up Node.js
+        if: >-
+          github.event.action == 'labeled' ||
+          contains(fromJSON('["OWNER", "MEMBER", "COLLABORATOR"]'), github.event.issue.author_association)
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+
+      - name: Apply and publish submission
+        if: >-
+          github.event.action == 'labeled' ||
+          contains(fromJSON('["OWNER", "MEMBER", "COLLABORATOR"]'), github.event.issue.author_association)
+        env:
+          ISSUE_BODY: ${{ github.event.issue.body }}
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email 'github-actions[bot]@users.noreply.github.com'
+          for attempt in 1 2 3; do
+            if node scripts/submit-gif.js > "$RUNNER_TEMP/gif-result.txt"; then
+              git add images.json
+              git commit -m "Add GIF from #$ISSUE_NUMBER"
+              if git push origin HEAD:main; then
+                gh issue comment "$ISSUE_NUMBER" --body-file "$RUNNER_TEMP/gif-result.txt"
+                gh issue close "$ISSUE_NUMBER" --reason completed
+                exit 0
+              fi
+              if [ "$attempt" -lt 3 ]; then
+                git fetch origin main
+                git reset --hard origin/main
+              fi
+            else
+              status=$?
+              if [ "$status" -eq 2 ]; then
+                gh issue comment "$ISSUE_NUMBER" --body-file "$RUNNER_TEMP/gif-result.txt"
+                gh issue close "$ISSUE_NUMBER" --reason 'not planned'
+                exit 0
+              fi
+              exit "$status"
+            fi
+          done
+          exit 1
+
+      - name: Report publishing failure
+        if: failure()
+        run: |
+          gh issue comment "$ISSUE_NUMBER" --body 'Publishing failed after retries or an unexpected error. A maintainer can check the workflow run, then remove and re-add approved to retry.'
