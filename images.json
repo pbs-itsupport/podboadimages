@@ -1,35 +1,27 @@
 {
-  "Monday": {
-    "0700": "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2gwejJjb2MyNmQzODA1bWkzdDFleTRndTE5aHg0bmljZXF0enVybSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5ZZSYqvcH6QppFQGI5/giphy.webp",
-    "0900": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3I1MDFqcm1maDVkNDhqcXluMjk2bWRoamw2YWUxa3BpbTJsbTBzeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1hqYk0leUMddBBkAM7/giphy.webp"
-  },
-  "Tuesday": {
-    "1100": "https://media1.tenor.com/m/Hr5LhrPYeBEAAAAC/everything-is-proceeding-as-i-have-foreseen-palpatine.gif",
-    "1300": "https://media1.tenor.com/m/VGtYoGPUcPcAAAAd/monkey-hand-out-give-me-orangutan.gif",
-    "0700": "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExanoweXRxenB0dWlhNWY5bW9jZmlncjR0Y3BlZXF1MXcyeWl2dnh6NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/23YfyiFsVgOic/giphy.webp",
-    "0800": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXpwbW9qaTdteWhmNnpzYXlzaTNyN3VpNDk4dDJkc3o3cmxqc2JmNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oxeRmwx3zW5vrDr18g/giphy.webp",
-    "0900": "https://media1.tenor.com/m/_bsFPWDMF64AAAAC/nodding-crossed-arms.gif"
-  },
-  "Wednesday": {
-    "1100": "https://media1.tenor.com/m/quEt0aqHHNYAAAAd/jennaortega-heart.gif",
-    "1300": "https://media1.tenor.com/m/GWTnktkS0d0AAAAd/lets-get-back-on-track-colin-jost.gif",
-    "1400": "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGdxM3ZmdDJyYW13cnE2aXJnNDhmczlkbHNkaHg1eG1sajhhMGw2MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/U2nN0ridM4lXy/200.webp",
-    "1500": "https://media1.tenor.com/m/tqcCmEmGVWoAAAAC/when-wen.gif",
-    "0700": "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3VsNWN1ZGwzNTQ2cmgweTJ2ZGJheXFxNjd6NTk0MGd6c25zOWppdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xqWQTgQaYbXhrXoToX/giphy.webp"
-  },
-  "Thursday": {
-    "1100": "https://media1.tenor.com/m/d1xmsZDWLbsAAAAd/songs-for-littles-ms-rachel.gif",
-    "1400": "https://media1.tenor.com/m/L6VMjz_cLUMAAAAC/squirrel-huh.gif",
-    "1500": "https://media1.tenor.com/m/yZj2OXGJrkoAAAAd/songs-for-littles-ms-rachel.gif",
-    "1600": "https://media1.tenor.com/m/sgKo1CVaP2cAAAAd/songs-for-littles-ms-rachel.gif",
-    "0700": "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWxpOWJyMHJ6c2FleGJ4M2hnN3Vtc3QxdWs5eW13eHJsaTFrd2dtMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GZvelTBnrmujCxmpch/giphy.webp"
-  },
-  "Friday": {
-    "1100": "https://media1.tenor.com/m/R0cvhZy3tOUAAAAd/travis-fran-healy.gif",
-    "1500": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcW8yOTB6M3ZzZ2Npc21vcnR0aHhqNndjaHZqMDZ4MGJ6bHB1MjAxYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rWZ4bUfIOGuyY/giphy.webp",
-    "1700": "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExc25mOHk2bmszZGNnYXExdzQ2MXBueGpsMTN3aXFibWdhc2tuc2hxaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/495NGl536Py5ZbOJjY/giphy.webp",
-    "0700": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTg4Y2Y5a3p2d2J4YXRwNjJmcGhpZWJwNWpmNGF5ZmV2MzkxYXA1diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MDxJnL1GGnuALMFu2e/giphy.webp"
-  },
+  "pool": [
+    "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExa2gwejJjb2MyNmQzODA1bWkzdDFleTRndTE5aHg0bmljZXF0enVybSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/5ZZSYqvcH6QppFQGI5/giphy.webp",
+    "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3I1MDFqcm1maDVkNDhqcXluMjk2bWRoamw2YWUxa3BpbTJsbTBzeSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/1hqYk0leUMddBBkAM7/giphy.webp",
+    "https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExanoweXRxenB0dWlhNWY5bW9jZmlncjR0Y3BlZXF1MXcyeWl2dnh6NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/23YfyiFsVgOic/giphy.webp",
+    "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExNXpwbW9qaTdteWhmNnpzYXlzaTNyN3VpNDk4dDJkc3o3cmxqc2JmNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/oxeRmwx3zW5vrDr18g/giphy.webp",
+    "https://media1.tenor.com/m/_bsFPWDMF64AAAAC/nodding-crossed-arms.gif",
+    "https://media1.tenor.com/m/Hr5LhrPYeBEAAAAC/everything-is-proceeding-as-i-have-foreseen-palpatine.gif",
+    "https://media1.tenor.com/m/VGtYoGPUcPcAAAAd/monkey-hand-out-give-me-orangutan.gif",
+    "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExM3VsNWN1ZGwzNTQ2cmgweTJ2ZGJheXFxNjd6NTk0MGd6c25zOWppdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xqWQTgQaYbXhrXoToX/giphy.webp",
+    "https://media1.tenor.com/m/quEt0aqHHNYAAAAd/jennaortega-heart.gif",
+    "https://media1.tenor.com/m/GWTnktkS0d0AAAAd/lets-get-back-on-track-colin-jost.gif",
+    "https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGdxM3ZmdDJyYW13cnE2aXJnNDhmczlkbHNkaHg1eG1sajhhMGw2MSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/U2nN0ridM4lXy/200.webp",
+    "https://media1.tenor.com/m/tqcCmEmGVWoAAAAC/when-wen.gif",
+    "https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWxpOWJyMHJ6c2FleGJ4M2hnN3Vtc3QxdWs5eW13eHJsaTFrd2dtMiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/GZvelTBnrmujCxmpch/giphy.webp",
+    "https://media1.tenor.com/m/d1xmsZDWLbsAAAAd/songs-for-littles-ms-rachel.gif",
+    "https://media1.tenor.com/m/L6VMjz_cLUMAAAAC/squirrel-huh.gif",
+    "https://media1.tenor.com/m/yZj2OXGJrkoAAAAd/songs-for-littles-ms-rachel.gif",
+    "https://media1.tenor.com/m/sgKo1CVaP2cAAAAd/songs-for-littles-ms-rachel.gif",
+    "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTg4Y2Y5a3p2d2J4YXRwNjJmcGhpZWJwNWpmNGF5ZmV2MzkxYXA1diZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/MDxJnL1GGnuALMFu2e/giphy.webp",
+    "https://media1.tenor.com/m/R0cvhZy3tOUAAAAd/travis-fran-healy.gif",
+    "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExcW8yOTB6M3ZzZ2Npc21vcnR0aHhqNndjaHZqMDZ4MGJ6bHB1MjAxYyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/rWZ4bUfIOGuyY/giphy.webp",
+    "https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExc25mOHk2bmszZGNnYXExdzQ2MXBueGpsMTN3aXFibWdhc2tuc2hxaSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/495NGl536Py5ZbOJjY/giphy.webp"
+  ],
   "error": {
     "imageUrl": "https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZnN1OXlvcXFkZnA1bHh5YzVnMjkxYmp6OXNhbmZycGZ6OHI5cmdkaiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/8L0Pky6C83SzkzU55a/giphy.webp"
   },

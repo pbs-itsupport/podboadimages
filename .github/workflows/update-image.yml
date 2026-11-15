@@ -3,7 +3,7 @@ name: Update image based on schedule
 on:
   schedule:
     # Run every hour, on the hour
-    - cron: '0 * * * *'
+    - cron: '0 10-23 * * 1-5'
   workflow_dispatch:
 
 permissions:
